@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Halaman profil pribadi Helnitasari - engineering, pengembangan sistem, dan analisis.">
+  <title>Helnitasari | Profil Pribadi</title>
+
+  <!-- Bootstrap 5 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Fraunces (judul) + DM Sans (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+
+  <!-- CSS sendiri -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menuUtama" data-bs-offset="90" tabindex="0">
+
+  <!-- =================== NAVBAR =================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="menuUtama">
+    <div class="container">
+      <a class="navbar-brand" href="#beranda">Helnitasari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu"
+              aria-expanded="false" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bahasa">Bahasa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobi">Hobi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- =================== HERO / FOTO + BIO =================== -->
+    <header class="hero" id="beranda">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Foto profil -->
+          <div class="col-lg-5 order-lg-2">
+            <div class="photo-wrap">
+              <div class="photo-frame">
+                <!--
+                  GANTI FOTO: simpan foto Anda di folder img/ dengan nama foto-profil.jpg
+                  Jika file belum ada, otomatis tampil inisial "H".
+                -->
+                <img src="img/foto-profil.jpg" alt="Foto profil Helnitasari"
+                     onerror="this.remove(); document.getElementById('inisial').hidden = false;">
+                <span class="photo-initial" id="inisial" hidden>H</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Perkenalan -->
+          <div class="col-lg-7 order-lg-1">
+            <p class="hero-kicker">Halo, saya</p>
+            <h1>Helnitasari</h1>
+            <p class="hero-sub">Who I am?</p>
+            <p class="lead">
+              Saya tertarik pada bidang engineering, terutama pengembangan sistem dan analisis.
+              Saya senang mencari tahu bagaimana sesuatu bekerja, memahami masalah yang muncul,
+              lalu memikirkan cara untuk memperbaikinya.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">
+              <a href="#tentang" class="btn btn-honey">Kenali saya lebih dekat</a>
+              <a href="#keahlian" class="btn btn-outline-cream">Lihat keahlian</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- =================== TENTANG / BIOGRAFI =================== -->
+    <section id="tentang" class="section-alt">
+      <div class="container">
+        <h2 class="section-title">Biografi</h2>
+        <p class="section-desc">Cara saya bekerja, belajar, dan memandang sebuah proyek.</p>
+
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <p>
+              Dalam mengerjakan sebuah proyek, saya ingin memahami kebutuhan dan alur kerjanya
+              terlebih dahulu. Saya tertarik mengolah informasi dan melihat pola yang bisa membantu
+              menentukan langkah berikutnya. Dari proses itu, saya belajar mengembangkan solusi
+              yang sesuai dengan kebutuhan pengguna.
+            </p>
+            <p>
+              Saya terus mengasah kemampuan melalui pembelajaran dan praktik langsung. Portofolio
+              ini menjadi tempat saya membagikan proyek, proses pengerjaan, serta hal-hal yang
+              saya pelajari sepanjang perjalanan tersebut.
+            </p>
+            <p class="bio-note mt-4">
+              Tinggal di sebuah pulau, dengan cara pandang global.
+            </p>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card card-sweet">
+              <div class="card-body p-4">
+                <h3 class="card-title mb-3">Latar belakang</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex gap-3 px-0">
+                    <i class="bi bi-mortarboard-fill text-warning fs-5"></i>
+                    <span><strong>Pendidikan</strong><br>
+                      <!-- EDIT: isi program studi & kampus Anda -->
+                      [Program Studi] &ndash; [Nama Kampus]</span>
+                  </li>
+                  <li class="list-group-item d-flex gap-3 px-0">
+                    <i class="bi bi-cpu-fill text-warning fs-5"></i>
+                    <span><strong>Fokus minat</strong><br>
+                      Engineering, pengembangan sistem, analisis</span>
+                  </li>
+                  <li class="list-group-item d-flex gap-3 px-0">
+                    <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                    <span><strong>Domisili</strong><br>
+                      Sebuah pulau, dengan cara pandang global</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More about me -->
+        <h3 class="mt-5 mb-4">More about me</h3>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-music-note-beamed"></i></div>
+              <h4 class="card-title">Musik</h4>
+              <p class="card-text mb-0">Saya selalu punya daftar musik yang menemani saat mengerjakan proyek.</p>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-compass"></i></div>
+              <h4 class="card-title">Menjelajah</h4>
+              <p class="card-text mb-0">Mengunjungi tempat baru menumbuhkan rasa ingin tahu dan melatih analisis terhadap hal yang saya amati.</p>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-cup-hot-fill"></i></div>
+              <h4 class="card-title">Kopi</h4>
+              <p class="card-text mb-0">Sebagian besar ide dan hasil proyek terbaik saya muncul di antara kopi pertama dan kedua.</p>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4 class="card-title">Analisis</h4>
+              <p class="card-text mb-0">Analisis adalah keunggulan saya: membaca situasi, lalu menentukan langkah yang tepat.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== LAYANAN =================== -->
+    <section id="layanan">
+      <div class="container">
+        <h2 class="section-title">Layanan saya</h2>
+        <p class="section-desc">Tiga hal yang paling sering saya kerjakan.</p>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-diagram-3-fill"></i></div>
+              <h3 class="card-title">Pengembangan Sistem</h3>
+              <p class="card-text mb-0">Merancang alur kerja dan mengembangkan fitur yang sesuai dengan kebutuhan pengguna.</p>
+            </div></div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-bar-chart-line-fill"></i></div>
+              <h3 class="card-title">Analisis Data</h3>
+              <p class="card-text mb-0">Mengolah data dan membaca pola untuk memahami masalah serta membantu menentukan langkah berikutnya.</p>
+            </div></div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-search-heart-fill"></i></div>
+              <h3 class="card-title">Analisis Kebutuhan</h3>
+              <p class="card-text mb-0">Mempelajari kebutuhan pengguna dan proses yang berjalan untuk menemukan bagian yang perlu diperbaiki.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== KEAHLIAN =================== -->
+    <section id="keahlian" class="section-alt">
+      <div class="container">
+        <h2 class="section-title">Keahlian</h2>
+        <p class="section-desc">Kemampuan teknis dan non-teknis yang terus saya asah.</p>
+
+        <div class="row g-5">
+          <!-- Progress bar -->
+          <div class="col-lg-7">
+            <h3 class="h4 mb-4">Keahlian teknis</h3>
+
+            <div class="mb-4">
+              <div class="skill-label"><span>Analisis Sistem &amp; Kebutuhan</span><span>85%</span></div>
+              <div class="progress" role="progressbar" aria-label="Analisis Sistem dan Kebutuhan" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="skill-label"><span>Pengembangan Sistem</span><span>75%</span></div>
+              <div class="progress" role="progressbar" aria-label="Pengembangan Sistem" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="skill-label"><span>Analisis Data</span><span>80%</span></div>
+              <div class="progress" role="progressbar" aria-label="Analisis Data" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="skill-label"><span>HTML &amp; Bootstrap</span><span>70%</span></div>
+              <div class="progress" role="progressbar" aria-label="HTML dan Bootstrap" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="skill-label"><span>Git &amp; GitHub</span><span>65%</span></div>
+              <div class="progress" role="progressbar" aria-label="Git dan GitHub" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="col-lg-5">
+            <h3 class="h4 mb-4">Keahlian non-teknis</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge badge-sweet">Berpikir analitis</span>
+              <span class="badge badge-sweet">Pemecahan masalah</span>
+              <span class="badge badge-sweet">Rasa ingin tahu</span>
+              <span class="badge badge-sweet">Membaca pola</span>
+              <span class="badge badge-sweet">Belajar mandiri</span>
+              <span class="badge badge-sweet">Komunikasi</span>
+              <span class="badge badge-sweet">Berpikir global</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== KEMAMPUAN BAHASA =================== -->
+    <section id="bahasa">
+      <div class="container">
+        <h2 class="section-title">Kemampuan bahasa</h2>
+        <p class="section-desc">Bahasa yang saya gunakan untuk belajar dan berkomunikasi.</p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <span class="lang-name">Indonesia</span>
+                <span class="lang-level">Bahasa ibu</span>
+              </div>
+              <div class="progress mt-3" role="progressbar" aria-label="Kemampuan Bahasa Indonesia" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 100%"></div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <span class="lang-name">Inggris</span>
+                <span class="lang-level">Aktif</span>
+              </div>
+              <div class="progress mt-3" role="progressbar" aria-label="Kemampuan Bahasa Inggris" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div></div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-sweet"><div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <span class="lang-name">Melayu</span>
+                <span class="lang-level">Menengah</span>
+              </div>
+              <div class="progress mt-3" role="progressbar" aria-label="Kemampuan Bahasa Melayu" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== HOBI & MINAT =================== -->
+    <section id="hobi" class="section-alt">
+      <div class="container">
+        <h2 class="section-title">Hobi &amp; minat</h2>
+        <p class="section-desc">Kegiatan yang membuat rasa ingin tahu saya tetap menyala.</p>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sweet hobby-card"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-phone-fill"></i></div>
+              <h4 class="h5">Mencoba hal baru</h4>
+              <p class="card-text mb-0 mx-auto">Mencoba aplikasi atau teknologi baru.</p>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sweet hobby-card"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-tools"></i></div>
+              <h4 class="h5">Proyek kecil</h4>
+              <p class="card-text mb-0 mx-auto">Mengerjakan proyek kecil.</p>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sweet hobby-card"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-puzzle-fill"></i></div>
+              <h4 class="h5">Puzzle &amp; strategi</h4>
+              <p class="card-text mb-0 mx-auto">Bermain puzzle atau permainan strategi.</p>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sweet hobby-card"><div class="card-body p-4">
+              <div class="icon-bubble"><i class="bi bi-play-circle-fill"></i></div>
+              <h4 class="h5">Konten teknologi</h4>
+              <p class="card-text mb-0 mx-auto">Membaca atau menonton konten teknologi.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="footer-brand mb-2 mx-auto">Helnitasari</p>
+      <p class="mb-3 mx-auto">Ide terbaik datang di antara kopi pertama dan kedua.</p>
+      <nav class="mb-3" aria-label="Navigasi footer">
+        <a class="footer-link" href="#beranda">Beranda</a>
+        <a class="footer-link" href="#tentang">Tentang</a>
+        <a class="footer-link" href="#keahlian">Keahlian</a>
+        <a class="footer-link" href="#hobi">Hobi</a>
+      </nav>
+      <small>&copy; 2026 Helnitasari. Dibuat dengan HTML5, Bootstrap, dan GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

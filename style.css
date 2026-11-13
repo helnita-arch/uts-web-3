@@ -1,0 +1,345 @@
+
+:root {
+  --espresso: #2b1810;
+  --mocha: #3e2415;
+  --chocolate: #5a3520;
+  --latte: #8a5a3b;
+  --caramel: #c68642;
+  --honey: #e8b86d;
+  --cream: #f7ead8;
+  --milk: #e3cdb0;
+  --rose: #d99a8b;
+  --card-bg: rgba(255, 240, 220, 0.07);
+  --card-border: rgba(232, 184, 109, 0.22);
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--cream);
+  line-height: 1.7;
+  background-color: var(--espresso);
+  background-image:
+    radial-gradient(ellipse at 15% 0%, rgba(198, 134, 66, 0.28), transparent 55%),
+    radial-gradient(ellipse at 90% 40%, rgba(217, 154, 139, 0.14), transparent 50%),
+    linear-gradient(180deg, var(--mocha) 0%, var(--espresso) 100%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p { max-width: 62ch; }
+
+a { color: var(--honey); }
+a:hover { color: var(--cream); }
+
+:focus-visible {
+  outline: 3px solid var(--honey);
+  outline-offset: 3px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: rgba(43, 24, 16, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--honey) !important;
+}
+
+.navbar .nav-link {
+  color: var(--milk);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--espresso);
+  background-color: var(--honey);
+}
+
+.navbar-toggler { border-color: var(--card-border); }
+.navbar-toggler-icon { filter: invert(85%) sepia(30%) saturate(500%); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 8.5rem 0 5rem;
+  position: relative;
+}
+
+.hero-kicker {
+  color: var(--honey);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  color: var(--rose);
+  margin-bottom: 1.5rem;
+}
+
+.hero p.lead {
+  color: var(--milk);
+  font-size: 1.1rem;
+}
+
+.btn-honey {
+  background-color: var(--honey);
+  border: 2px solid var(--honey);
+  color: var(--espresso);
+  font-weight: 700;
+  padding: 0.7rem 1.7rem;
+  border-radius: 999px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-honey:hover {
+  background-color: var(--caramel);
+  border-color: var(--caramel);
+  color: var(--espresso);
+  transform: translateY(-2px);
+}
+
+.btn-outline-cream {
+  border: 2px solid var(--milk);
+  color: var(--cream);
+  font-weight: 600;
+  padding: 0.7rem 1.7rem;
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline-cream:hover {
+  background-color: var(--cream);
+  color: var(--espresso);
+}
+
+/* Foto profil dalam bingkai lengkung (bentuk pintu / arch) */
+.photo-wrap {
+  position: relative;
+  width: min(100%, 340px);
+  margin: 0 auto;
+}
+
+.photo-frame {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 28px 28px;
+  overflow: hidden;
+  border: 6px solid var(--honey);
+  background: linear-gradient(160deg, var(--latte), var(--chocolate));
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 22px -22px -22px 22px;
+  z-index: 1;
+  border-radius: 999px 999px 28px 28px;
+  border: 2px dashed rgba(232, 184, 109, 0.55);
+}
+
+.photo-initial {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  color: var(--honey);
+}
+
+/* ---------- Section umum ---------- */
+section { padding: 5rem 0; }
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  color: var(--milk);
+  margin-bottom: 2.5rem;
+}
+
+.section-alt {
+  background: rgba(20, 10, 5, 0.32);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* ---------- Card ---------- */
+.card-sweet {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  color: var(--cream);
+  height: 100%;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.card-sweet:hover {
+  transform: translateY(-5px);
+  border-color: var(--honey);
+}
+
+.card-sweet .card-title {
+  color: var(--honey);
+  font-size: 1.35rem;
+}
+
+.card-sweet .card-text { color: var(--milk); }
+
+.icon-bubble {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--honey);
+  color: var(--espresso);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+/* ---------- Bio ---------- */
+.bio-note {
+  border-left: 4px solid var(--honey);
+  padding-left: 1.1rem;
+  color: var(--milk);
+}
+
+.list-group-item {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--card-border);
+}
+
+/* ---------- Skills ---------- */
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.progress {
+  height: 12px;
+  background-color: rgba(255, 240, 220, 0.12);
+  border-radius: 999px;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--caramel), var(--honey));
+  border-radius: 999px;
+}
+
+.badge-sweet {
+  background: rgba(232, 184, 109, 0.14);
+  border: 1px solid var(--honey);
+  color: var(--honey);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+}
+
+/* ---------- Bahasa ---------- */
+.lang-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--honey);
+}
+
+.lang-level {
+  font-size: 0.95rem;
+  color: var(--rose);
+  font-weight: 500;
+}
+
+/* ---------- Hobi ---------- */
+.hobby-card {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.hobby-card .icon-bubble {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--rose);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #1c0f09;
+  border-top: 1px solid var(--card-border);
+  padding: 3rem 0 2rem;
+  color: var(--milk);
+}
+
+footer .footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--honey);
+}
+
+footer .footer-link {
+  color: var(--milk);
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+footer .footer-link:hover { color: var(--honey); }
+
+/* ---------- Gerak dikurangi ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 991.98px) {
+  .hero { padding: 7rem 0 3.5rem; text-align: center; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .photo-wrap { margin-bottom: 2.5rem; width: min(80%, 300px); }
+  .navbar-collapse { padding: 0.75rem 0; }
+}
+
+@media (max-width: 575.98px) {
+  section { padding: 3.5rem 0; }
+  .photo-wrap::before { inset: 14px -12px -14px 12px; }
+}
